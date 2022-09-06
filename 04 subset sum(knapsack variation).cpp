@@ -40,11 +40,6 @@ return t[n][sum]; //return T/F
         
 }
 
-// therefore the complesity for this is time complexity = 0(sum*n) 
-// sum as we know the answe sum or can say target sum ejhich we are finding 
-// and n is the size of the array here
-// and the space complezity  = o(sum*n)
-
 int main() {
 	int n; cin >> n;
 	int arr[n];
