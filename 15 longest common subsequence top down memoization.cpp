@@ -16,11 +16,13 @@ int LCS(string X, string Y, int n, int m) {
 	// when last character is same
 	if (X[n - 1] == Y[m - 1])
 		dp[n][m] = 1 + LCS(X, Y, n - 1, m - 1);
-  // count the number and decreament the both's string length // store the value in particular block 
-	// when last character is not same -> pick max
+  // count the number and decreament the both's string length 
+	// store the value in particular block 
+	// when last character is not same so picking the max 
 	else
 		dp[n][m] = max(LCS(X, Y, n - 1, m), LCS(X, Y, n, m - 1)); 
-  // one take full and another by leaving last char and vice versa // store the value in particular block 
+  // one take full and another by leaving last char and vice versa 
+	// store the value in particular block 
 
 	return dp[n][m];
 }
@@ -30,7 +32,8 @@ int main() {
 	int n = X.length(), m = Y.length();
 
 	memset(dp, -1, sizeof(dp)); 
-  // intialize the whole dp matrix with -1; // from memset we can initialise either -1 and zero;
+  // intialize the whole dp matrix with -1; 
+	// from memset we can initialise either -1 and zero;
 
 	cout << LCS(X, Y, n, m) << endl;
 	return 0;
