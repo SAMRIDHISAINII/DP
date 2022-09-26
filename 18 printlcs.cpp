@@ -17,6 +17,7 @@ string LCS(string X, string Y, int n, int m) {
 //         if last character not smae than it would pick max
 				dp[i][j] = max(dp[i][j - 1], dp[i - 1][j]);
 
+	
 	int i = n, j = m;
 	string lcs = ""; 
   // storing charcter when equal
